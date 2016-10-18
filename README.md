@@ -36,7 +36,9 @@
         debugPrint(transaction.payment.productIdentifier)
         
         LYIAP.verifyPruchase(completion: {(receipt,error) in
-            // You can verify the transaction. In this callback, you will get the receipt if the transaction is verified by the APPLE. You can compare some tranction infomation with the receipt.
+            // You can verify the transaction. 
+            //In this callback, you will get the receipt if the transaction is verified by the APPLE. 
+            //You can compare some tranction infomation with the receipt.
             debugPrint(receipt)
         })
     }

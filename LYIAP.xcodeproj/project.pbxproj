@@ -14,6 +14,8 @@
 		8AD366201DB6931E00424895 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD3661E1DB6931E00424895 /* LaunchScreen.storyboard */; };
 		8AD3662B1DB6931E00424895 /* LYIAPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD3662A1DB6931E00424895 /* LYIAPTests.swift */; };
 		8AD366361DB6931E00424895 /* LYIAPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD366351DB6931E00424895 /* LYIAPUITests.swift */; };
+		8AD366441DB6934800424895 /* LYIAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD366431DB6934800424895 /* LYIAPManager.swift */; };
+		8AD366471DB6A00200424895 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD366461DB6A00200424895 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		8AD366311DB6931E00424895 /* LYIAPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYIAPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD366351DB6931E00424895 /* LYIAPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYIAPUITests.swift; sourceTree = "<group>"; };
 		8AD366371DB6931F00424895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AD366431DB6934800424895 /* LYIAPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYIAPManager.swift; sourceTree = "<group>"; };
+		8AD366461DB6A00200424895 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD366471DB6A00200424895 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,7 @@
 				8AD366291DB6931E00424895 /* LYIAPTests */,
 				8AD366341DB6931E00424895 /* LYIAPUITests */,
 				8AD366131DB6931E00424895 /* Products */,
+				8AD366451DB6A00100424895 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +103,7 @@
 		8AD366141DB6931E00424895 /* LYIAP */ = {
 			isa = PBXGroup;
 			children = (
+				8AD366431DB6934800424895 /* LYIAPManager.swift */,
 				8AD366151DB6931E00424895 /* AppDelegate.swift */,
 				8AD366171DB6931E00424895 /* ViewController.swift */,
 				8AD366191DB6931E00424895 /* Main.storyboard */,
@@ -123,6 +130,14 @@
 				8AD366371DB6931F00424895 /* Info.plist */,
 			);
 			path = LYIAPUITests;
+			sourceTree = "<group>";
+		};
+		8AD366451DB6A00100424895 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AD366461DB6A00200424895 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,15 +208,18 @@
 				TargetAttributes = {
 					8AD366111DB6931E00424895 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					8AD366251DB6931E00424895 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 8AD366111DB6931E00424895;
 					};
 					8AD366301DB6931E00424895 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 8AD366111DB6931E00424895;
 					};
@@ -259,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD366441DB6934800424895 /* LYIAPManager.swift in Sources */,
 				8AD366181DB6931E00424895 /* ViewController.swift in Sources */,
 				8AD366161DB6931E00424895 /* AppDelegate.swift in Sources */,
 			);

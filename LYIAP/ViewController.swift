@@ -15,6 +15,7 @@ class ViewController: UIViewController,LYIAPDelegate {
         super.viewDidLoad()
         let productsIds = NSSet(array: ["com.xxx.xxx.abc"])
         LYIAP.setRequestWithProducts(productsIds, delegate: self)
+        LYIAP.startRequest()
         // Do any additional setup after loading the view, typically from a nib.
     }
 

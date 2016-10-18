@@ -3,16 +3,18 @@
 - Easy to use
 
 ## Step1
+- Conforming to ```LYIAPDelegate``` protocol（遵守```LYIAPDelegate```协议）
+
 ```swift
-	class ViewController: UIViewController,LYIAPDelegate {
+	class ViewController: UIViewController, LYIAPDelegate {
 		override func viewDidLoad() {
-        super.viewDidLoad()
+       	super.viewDidLoad()
     	}
 	}
 ```
 
 ## Step2
-- Set delegate and start request
+- Set delegate and send product request（设置代理并发送商品请求）
 
 ```swift
 	 override func viewDidLoad() {
@@ -22,7 +24,7 @@
     }
 ```
 ## Step3
-- Implement delegate function
+- Implement delegate function（实现代理方法）
 
 ```swift
     func requestFinished() {
@@ -44,4 +46,16 @@
         // You must add restore function to your app accroding to APPLE's provisions
         debugPrint(transaction.payment.productIdentifier)
     }
+```
+
+## More Details（更多的细节）
+```swift
+    @objc optional func requestFinished()
+    func transactionPurchased(_ queue: SKPaymentQueue, transaction: SKPaymentTransaction)
+    @objc optional func transactionFailed(_ queue: SKPaymentQueue, transaction: SKPaymentTransaction)
+    @objc optional func transactionRestore(_ queue: SKPaymentQueue, transaction: SKPaymentTransaction)
+    @objc optional func transactionDeferred(_ queue: SKPaymentQueue, transaction: SKPaymentTransaction)
+    @objc optional func transactionPurchasing(_ queue: SKPaymentQueue, transaction: SKPaymentTransaction)
+    @objc optional func transactionRestoreFailedWithError(_ error:Error)
+    @objc optional func transactionRestoreFinished(_ isSuccess:Bool)
 ```

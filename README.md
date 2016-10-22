@@ -3,7 +3,7 @@
 - Really Really Easy to use
 
 # Easy use
-## Firstly config() 
+### Firstly config() 
 
 ```swift
 LYIAPHelper.shared.config()

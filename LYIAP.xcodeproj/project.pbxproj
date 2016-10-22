@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A8B64271DBB9C3600D609A8 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8B64261DBB9C3600D609A8 /* DemoViewController.swift */; };
+		8AC986C01DBB87A70001F3AC /* LYIAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC986BF1DBB87A70001F3AC /* LYIAPHelper.swift */; };
 		8AD366161DB6931E00424895 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD366151DB6931E00424895 /* AppDelegate.swift */; };
 		8AD366181DB6931E00424895 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD366171DB6931E00424895 /* ViewController.swift */; };
 		8AD3661B1DB6931E00424895 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD366191DB6931E00424895 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A8B64261DBB9C3600D609A8 /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		8AC986BF1DBB87A70001F3AC /* LYIAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYIAPHelper.swift; sourceTree = "<group>"; };
 		8AD366121DB6931E00424895 /* LYIAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYIAP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD366151DB6931E00424895 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AD366171DB6931E00424895 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				8AD366141DB6931E00424895 /* LYIAP */,
-				8AD366291DB6931E00424895 /* LYIAPTests */,
 				8AD366341DB6931E00424895 /* LYIAPUITests */,
 				8AD366131DB6931E00424895 /* Products */,
 				8AD366451DB6A00100424895 /* Frameworks */,
@@ -104,12 +107,15 @@
 			isa = PBXGroup;
 			children = (
 				8AD366431DB6934800424895 /* LYIAPManager.swift */,
+				8AC986BF1DBB87A70001F3AC /* LYIAPHelper.swift */,
 				8AD366151DB6931E00424895 /* AppDelegate.swift */,
 				8AD366171DB6931E00424895 /* ViewController.swift */,
+				8A8B64261DBB9C3600D609A8 /* DemoViewController.swift */,
 				8AD366191DB6931E00424895 /* Main.storyboard */,
 				8AD3661C1DB6931E00424895 /* Assets.xcassets */,
 				8AD3661E1DB6931E00424895 /* LaunchScreen.storyboard */,
 				8AD366211DB6931E00424895 /* Info.plist */,
+				8AD366291DB6931E00424895 /* LYIAPTests */,
 			);
 			path = LYIAP;
 			sourceTree = "<group>";
@@ -121,7 +127,7 @@
 				8AD3662C1DB6931E00424895 /* Info.plist */,
 			);
 			path = LYIAPTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		8AD366341DB6931E00424895 /* LYIAPUITests */ = {
 			isa = PBXGroup;
@@ -277,9 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AC986C01DBB87A70001F3AC /* LYIAPHelper.swift in Sources */,
 				8AD366441DB6934800424895 /* LYIAPManager.swift in Sources */,
 				8AD366181DB6931E00424895 /* ViewController.swift in Sources */,
 				8AD366161DB6931E00424895 /* AppDelegate.swift in Sources */,
+				8A8B64271DBB9C3600D609A8 /* DemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +532,7 @@
 				8AD3663C1DB6931F00424895 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8AD3663D1DB6931F00424895 /* Build configuration list for PBXNativeTarget "LYIAPTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +541,7 @@
 				8AD3663F1DB6931F00424895 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8AD366401DB6931F00424895 /* Build configuration list for PBXNativeTarget "LYIAPUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +550,7 @@
 				8AD366421DB6931F00424895 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

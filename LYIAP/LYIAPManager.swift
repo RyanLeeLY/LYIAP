@@ -59,17 +59,22 @@ public class LYIAPManager: NSObject, SKPaymentTransactionObserver, SKProductsReq
     /**
      Example: let productsIds = NSSet(array: ["com.xxx.xxx.abc"])
      */
-    func setRequestWithProducts(_ productsIds: NSSet, delegate: LYIAPDelegate?) {
+    func setRequestWithProducts(_ productsIds: NSSet, delegate: LYIAPDelegate? = nil) {
         request = SKProductsRequest(productIdentifiers: productsIds as! Set<String>)
         request?.delegate = self
         SKPaymentQueue.default().add(self)
         
         if(delegate != nil){
-            self.delegate = delegate!
-            paymentDelegate = delegate!
-            requestDelegate = delegate!
+            setLYIAPDelegate(delegate!)
         }
     }
+    
+    func setLYIAPDelegate(_ delegate: LYIAPDelegate){
+        self.delegate = delegate
+        paymentDelegate = delegate
+        requestDelegate = delegate
+    }
+    
     
     func setPaymentTransactionsDelegate(_ delegate: LYIAPPaymentDelegate){
         paymentDelegate = delegate

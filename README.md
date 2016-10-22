@@ -1,7 +1,50 @@
 # LYIAP
 - iOS IAP by Swift 3.0
-- Easy to use
+- Really Really Easy to use
 
+# Easy use
+## Firstly config() 
+
+```swift
+LYIAPHelper.shared.config()
+```
+
+### Request products
+
+```swift
+LYIAPHelper.shared.requestProductsWithIds(NSSet(array: ["PRODUCT_IDENTIFIER"]), completion: {Void in
+            // Do something when products have been loaded.
+        })
+```
+
+### Purchse
+
+```swift
+LYIAPHelper.shared.purchaseProductWithId(productId: "PRODUCT_IDENTIFIER", completion: {transaction in
+            // Identifier of the product that has been purchased
+            debugPrint(transaction.payment.productIdentifier)
+        })
+```
+
+### Restore
+
+```swift
+LYIAPHelper.shared.restoreWithCompletion(
+       success: {transaction in
+              // Identifier of the product that has been restored
+              // You must add restore function to your app accroding to APPLE's provisions
+       			debugPrint(transaction.payment.productIdentifier)
+          	},
+           finish: {isSucceess in
+                // It is called when restore is finished.
+                // isSuccess will be true when some products have been restored successfully.
+        })
+```
+
+***
+# Basic use
+- If you want to customize something more to support you App, try to do these below.
+ 
 ## Step1
 - Conforming to ```LYIAPDelegate``` protocol（遵守```LYIAPDelegate```协议）
 

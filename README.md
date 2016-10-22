@@ -40,8 +40,11 @@ LYIAPHelper.shared.restoreWithCompletion(
                 // isSuccess will be true when some products have been restored successfully.
         })
 ```
-
+<br>
 ***
+<br>
+<br>
+<br>
 # Basic use
 - If you want to customize something more to support you App, try to do these below.
  
